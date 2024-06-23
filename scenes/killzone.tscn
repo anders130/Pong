@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b32e2k728f8lx"]
+
+[ext_resource type="Texture2D" uid="uid://qsritlt12pr0" path="res://assets/WhitePixel.png" id="1_wqr7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6ivm"]
+size = Vector2(2, 2)
+
+[node name="Killzone" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i6ivm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.196078, 1, 1, 0.439216)
+scale = Vector2(2, 2)
+texture = ExtResource("1_wqr7a")

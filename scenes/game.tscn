@@ -1,5 +1,37 @@
-[gd_scene format=3 uid="uid://q8au2vfvk744"]
+[gd_scene load_steps=4 format=3 uid="uid://q8au2vfvk744"]
+
+[ext_resource type="PackedScene" uid="uid://c3jrhhoi5k5pm" path="res://scenes/player.tscn" id="1_p4pwi"]
+[ext_resource type="PackedScene" uid="uid://cnsdrknhy3f6i" path="res://scenes/border.tscn" id="2_hsd0v"]
+[ext_resource type="PackedScene" uid="uid://b32e2k728f8lx" path="res://scenes/killzone.tscn" id="3_cwpr6"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
+
+[node name="Player" parent="." instance=ExtResource("1_p4pwi")]
+position = Vector2(-60, 0)
+
+[node name="Player2" parent="." instance=ExtResource("1_p4pwi")]
+position = Vector2(60, 0)
+move_up = "up2"
+move_down = "down2"
+
+[node name="Borders" type="Node" parent="."]
+
+[node name="Border" parent="Borders" instance=ExtResource("2_hsd0v")]
+position = Vector2(0, 40)
+
+[node name="Border2" parent="Borders" instance=ExtResource("2_hsd0v")]
+position = Vector2(0, -40)
+rotation = 3.14159
+
+[node name="Killzones" type="Node" parent="."]
+
+[node name="Killzone" parent="Killzones" instance=ExtResource("3_cwpr6")]
+position = Vector2(-72, 0)
+scale = Vector2(1, 40)
+
+[node name="Killzone2" parent="Killzones" instance=ExtResource("3_cwpr6")]
+position = Vector2(72, 0)
+scale = Vector2(1, 40)
