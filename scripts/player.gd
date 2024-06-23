@@ -1,15 +1,15 @@
-extends CharacterBody2D
+extends AnimatableBody2D
 
 @export var move_up = "up"
 @export var move_down = "down"
 
-const SPEED = 100.0
+@export_range(0, 1000, 10, 'suffix:px/s')
+var speed: float
 
-func _physics_process(delta):
+@export
+var velocity: Vector2
+
+func _physics_process(delta: float) -> void:
     var direction = Input.get_axis(move_up, move_down)
-    if direction:
-        velocity.y = direction * SPEED
-    else:
-        velocity.y = move_toward(velocity.y, 0, SPEED)
-
-    move_and_slide()
+    var motion = Vector2.DOWN * direction * speed * delta
+    move_and_collide(motion)

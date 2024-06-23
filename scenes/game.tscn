@@ -14,11 +14,13 @@ zoom = Vector2(8, 8)
 
 [node name="Player" parent="." instance=ExtResource("1_p4pwi")]
 position = Vector2(-60, 0)
+speed = 100.0
 
 [node name="Player2" parent="." instance=ExtResource("1_p4pwi")]
 position = Vector2(60, 0)
 move_up = "up2"
 move_down = "down2"
+speed = 100.0
 
 [node name="Borders" type="Node" parent="."]
 
