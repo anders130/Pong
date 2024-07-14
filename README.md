@@ -15,4 +15,6 @@ Ball wird zur Banana und springt unberechenbar durch die gegend und dreht sich
 ### Controller
 Ball steuern
 ### Flasche (cptn Haddock)
-Mehrere Bälle aber nur einer ist echttz
+Mehrere Bälle aber nur einer ist echt
+### Irgendwas
+Das Paddel(der Schläger) wird größer
